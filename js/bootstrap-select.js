@@ -1167,7 +1167,7 @@
 
         if (
           currentChunk === undefined &&
-          typeof that.selectpicker.current.data[endOfChunk - 1] === 'undefined' &&
+          typeof that.selectpicker.current.data[endOfChunk - 1] !== 'undefined' &&
           scrollTop <= that.selectpicker.current.data[endOfChunk - 1].position
         ) {
           currentChunk = chunkCount - 1;
