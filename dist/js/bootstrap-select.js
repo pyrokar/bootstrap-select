@@ -1234,6 +1234,14 @@
           }
         }
 
+        if (
+          currentChunk === undefined &&
+          typeof that.selectpicker.current.data[endOfChunk - 1] !== 'undefined' &&
+          scrollTop <= that.selectpicker.current.data[endOfChunk - 1].position
+        ) {
+          currentChunk = chunkCount - 1;
+        }
+
         if (currentChunk === undefined) currentChunk = 0;
 
         prevPositions = [that.selectpicker.view.position0, that.selectpicker.view.position1];
